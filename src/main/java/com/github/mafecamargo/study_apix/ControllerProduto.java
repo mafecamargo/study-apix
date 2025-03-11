@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerProduto {
 
     @PostMapping
-    public ResponseEntity<String> create(){
+    public ResponseEntity<String> create(@RequestBody Produto produto){
         return ResponseEntity.status(201).body("Produto cadastrado");
     }
 
@@ -25,7 +26,7 @@ public class ControllerProduto {
 
     @GetMapping
     public ResponseEntity<String> find(){
-        return ResponseEntity.status(200).body("Framboesa");
+        return ResponseEntity.status(200).body("Mirtilo");
     }
 
     @DeleteMapping
