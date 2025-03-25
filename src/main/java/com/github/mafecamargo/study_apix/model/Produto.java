@@ -1,4 +1,4 @@
-package com.github.mafecamargo.study_apix;
+package com.github.mafecamargo.study_apix.model;
 
 public class Produto {
     // atribtos são sempre private 

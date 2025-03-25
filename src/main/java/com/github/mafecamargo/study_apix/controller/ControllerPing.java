@@ -1,4 +1,4 @@
-package com.github.mafecamargo.study_apix;
+package com.github.mafecamargo.study_apix.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
