@@ -3,24 +3,24 @@ package com.github.mafecamargo.study_apix.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.github.mafecamargo.study_apix.dto.ProdutoRequestCreate;
 import com.github.mafecamargo.study_apix.model.Produto;
+import com.github.mafecamargo.study_apix.repository.ProdutoRepository;
 
 @Service
 public class ProdutoService {
 // responsável por conversar com o banco de dados
+    @Autowired
+    private ProdutoRepository produtoRepository;
 
-    // simulação com uma tabela
-    private List<Produto> produtos = new ArrayList<>();
-    private Long id = 1L;
+    public Produto save(ProdutoRequestCreate dto) {
+        Produto produto = new Produto();
+        produto.setNome(dto.getNome());
 
-
-    public Produto save(Produto request) {
-
-        request.setId(id++);
-        produtos.add(request);
-        return request;
+        return produtoRepository.save(produto);
     }
 
 }

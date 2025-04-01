@@ -1,7 +1,15 @@
 package com.github.mafecamargo.study_apix.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Produto {
-    // atribtos são sempre private 
+    @Id
+    @GeneratedValue
+    
+    // atributos são sempre private 
     private Long id;
     private String nome;
 
